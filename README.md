@@ -44,3 +44,4 @@ By default, notes are appended to the same document regardless of where you are 
 ## History
 
 - 0.0.1 - Initial release
+- 0.0.2 - Updates to README, `package.json`
