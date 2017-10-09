@@ -50,11 +50,11 @@ export function deactivate() {}
 function newLine(firstLine = false) {
   const now = new Date();
   let datestamp =
-    "----------" +
+    "__________ " +
     now.toJSON().slice(0, 10) +
     " " +
     now.toLocaleTimeString("fullwise", { hour12: false }) +
-    "----------";
+    " __________";
   var fullText = prepend
     ? (firstLine ? "" : EOL) + datestamp + EOL + "\n"
     : (firstLine ? "" : EOL) + datestamp + EOL;
