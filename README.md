@@ -45,3 +45,7 @@ By default, notes are appended to the same document regardless of where you are 
 
 - 0.0.1 - Initial release
 - 0.0.2 - Updates to README, `package.json`
+
+## Acknowledgements
+
+- This extension was forked from [awesomektvn's vscode-scratchpad plugin.](https://github.com/awesomektvn/vscode-scratchpad) As he was not responding to a PR, I have begin maintaining my own fork.
