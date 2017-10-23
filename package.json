@@ -2,7 +2,7 @@
   "name": "scratchpad",
   "displayName": "Scratchpad",
   "description": "Simple Scratchpad for quick notes.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "macintacos",
   "engines": {
     "vscode": "^1.0.0"
@@ -16,12 +16,10 @@
   "activationEvents": ["onCommand:extension.openScratchpad"],
   "main": "./out/src/extension",
   "contributes": {
-    "commands": [
-      {
-        "command": "extension.openScratchpad",
-        "title": "Open Scratchpad"
-      }
-    ],
+    "commands": [{
+      "command": "extension.openScratchpad",
+      "title": "Open Scratchpad"
+    }],
     "configuration": {
       "type": "object",
       "title": "Scratchpad Config",
@@ -29,8 +27,7 @@
         "scratchpad.prepend": {
           "type": "boolean",
           "default": false,
-          "description":
-            "Specifies whether or not you want to prepend notes to your scratchpad, rather than the default append. Timestamp will be placed at the top of the file, with the cursor inserted just beneath it."
+          "description": "Specifies whether or not you want to prepend notes to your scratchpad, rather than the default append. Timestamp will be placed at the top of the file, with the cursor inserted just beneath it."
         }
       }
     }
