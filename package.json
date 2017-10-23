@@ -1,32 +1,44 @@
 {
-    "name": "scratchpad",
-    "displayName": "Scratchpad",
-    "description": "a simple scratchpad for vscode",
-    "version": "0.0.1",
-    "publisher": "awesomektvn",
-    "engines": {
-        "vscode": "^1.0.0"
-    },
-    "categories": [
-        "Other"
-    ],
-    "activationEvents": [
-        "onCommand:extension.openScratchpad"
-    ],
-    "main": "./out/src/extension",
-    "contributes": {
-        "commands": [{
-            "command": "extension.openScratchpad",
-            "title": "Open Scratchpad"
-        }]
-    },
-    "scripts": {
-        "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
-        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
-        "postinstall": "node ./node_modules/vscode/bin/install"
-    },
-    "devDependencies": {
-        "typescript": "^1.8.5",
-        "vscode": "^0.11.0"
+  "name": "scratchpad",
+  "displayName": "Scratchpad",
+  "description": "Simple Scratchpad for quick notes.",
+  "version": "0.0.3",
+  "publisher": "macintacos",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "homepage": "https://github.com/macintacos/vscode-scratchpad",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/macintacos/vscode-scratchpad.git"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:extension.openScratchpad"],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [{
+      "command": "extension.openScratchpad",
+      "title": "Open Scratchpad"
+    }],
+    "configuration": {
+      "type": "object",
+      "title": "Scratchpad Config",
+      "properties": {
+        "scratchpad.prepend": {
+          "type": "boolean",
+          "default": false,
+          "description": "Specifies whether or not you want to prepend notes to your scratchpad, rather than the default append. Timestamp will be placed at the top of the file, with the cursor inserted just beneath it."
+        }
+      }
     }
+  },
+  "scripts": {
+    "vscode:prepublish": "",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.5",
+    "vscode": "^0.11.0"
+  }
 }
